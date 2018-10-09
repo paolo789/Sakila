@@ -70,7 +70,7 @@
 			<c:forEach items="${filmsattore}" var="filmattore">
 
 				<tr>
-					<td>${filmattore.title}</td>
+					<td><a href="listaattorifilm?Film=${filmattore.film_id}">${filmattore.title}</a></td>
 					<td>${filmattore.description }</td>
 
 				</tr>
@@ -80,21 +80,13 @@
 	</c:if>
 
 	<c:if test="${actorsfilm != null}">
-		<table border=1>
-			<tr>
-				<th>nome</th>
-				<th>cognome</th>
-			</tr>
+		
 			<c:forEach items="${actorsfilm}" var="actorfilm">
 
-				<tr>
-					<td>${actorfilm.firstName}</td>
-					<td>${actorfilm.lastName }</td>
-
-				</tr>
-
+				
+					<a href="listafilmattore?Attore=${actorfilm.actorId}">${actorfilm.firstName}
+								${actorfilm.lastName}</a><br><br>
 			</c:forEach>
-		</table>
 	</c:if>
 	<c:if test="${categoryFilm != null}">
 		<table border=1>
@@ -105,7 +97,7 @@
 			<c:forEach items="${categoryFilm}" var="catfilm">
 
 				<tr>
-					<td>${catfilm.title}</td>
+					<td><a href="listaattorifilm?Film=${catfilm.film_id}">${catfilm.title}</a></td>
 					<td>${catfilm.description }</td>
 
 				</tr>

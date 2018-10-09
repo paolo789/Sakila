@@ -31,7 +31,6 @@ public class CategoryController {
 	@RequestMapping("/listagenere")
 	public String getCategory(ModelMap map) {
 		List<CategoryBean> categorylist=cd.getCategory();
-		System.out.println("category "+categorylist.get(1));
 		map.addAttribute("category", categorylist);
 		return "Ricerca";
 	}
