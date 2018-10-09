@@ -31,6 +31,7 @@ public class AttoriController {
 		map.addAttribute("attori", actorlist);
 		return "forward:listagenere";
 	}
+	
 
 	@RequestMapping("/listaattorifilm")
 	public String attoriFilm(ModelMap map,@RequestParam("Film") String film ) {
